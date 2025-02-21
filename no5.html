@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>no.5</title>
+</head>
+<body>
+    <h3>5. Write a JavaScript function that takes a sentence from the user and counts the number of words in it. 
+        Display the result in an HTML paragraph.
+    </h3>
+
+
+    <label>Enter a sentence:</label>
+
+    <input type="text" id="sentenceInput" placeholder="Type a sentence">
+
+    <button onclick="countWords()">Count Words</button>
+
+    <p id="wordCount"></p>
+
+    <script>
+        function countWords() {
+
+            let sentence = document.getElementById("sentenceInput").value.trim();
+            
+            if (sentence === "") {
+
+                document.getElementById("wordCount").innerText = "Word count: 0";
+                
+                return;
+            }
+
+            let words = sentence.split(/\s+/); 
+
+            document.getElementById("wordCount").innerText = "Word count: " + words.length;
+        }
+    </script>
+</body>
+</html>

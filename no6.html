@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>no.6</title>
+</head>
+<body>
+    <h3>6. Write a JavaScript function that converts a temperature from Celsius to Fahrenheit. The formula is:
+        F=(C×9/5)+32.The user should enter a value in Celsius, and the result should be displayed in Fahrenheit.
+        </h3>
+
+
+    <label>Enter temperature in Celsius:</label>
+
+    <input type="number" id="celsius Input" placeholder="Enter Celsius">
+
+    <button onclick="convertTemperature()">Convert</button>
+
+    <p id="fahrenheitResult"></p>
+
+    <script>
+        function convertTemperature() {
+
+            let celsius = parseFloat(document.getElementById("celsiusInput").value); 
+
+            let fahrenheit = (celsius * 9/5) + 32; 
+
+            document.getElementById("fahrenheitResult").innerText = `Temperature in Fahrenheit: ${fahrenheit.toFixed(2)} °F`;
+        }
+    </script>
+</body>
+</html>
